@@ -29,7 +29,7 @@ class WechatMiniController extends PublicController
      * @param string $body
      * @return mixed
      */
-    public function payWechat($fee = 1, $openid = 'oAfYU0V7qtFYt_oRvbt2vB13Ln1E', $out_trade_no = null, $body = '商品')
+    public function jsWechat($fee, $openid, $out_trade_no = null, $body = '商品')
     {
         $post = array(
             'appid' => WechatConfigController::APP_ID,
@@ -49,6 +49,34 @@ class WechatMiniController extends PublicController
         $data = $this->arrayToXml($post);
         $return_data = $this->httpPost('https://api.mch.weixin.qq.com/pay/unifiedorder', $data, false);
         return json_decode(json_encode(simplexml_load_string($return_data, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+    }
+
+    /**
+     * 微信支付接口
+     * @param int $fee
+     * @param string $openid
+     * @param null $out_trade_no
+     * @param string $body
+     * @return mixed
+     */
+    public function payWecaht($fee = 1, $openid, $out_trade_no = null, $body = '商品')
+    {
+        $return_data = $this->jsWechat($fee * 100, $openid, $out_trade_no, $body);
+        $res['timeStamp'] = (string)time();
+        $res['nonceStr'] = $return_data['nonce_str'];
+        $res['package'] = 'prepay_id=' . $return_data['prepay_id'];
+        $res['signType'] = 'MD5';
+        $sign_data = array(
+            'appId' => WechatConfigController::APP_ID,
+            'timeStamp' => $res['timeStamp'],
+            'nonceStr' => $return_data['nonceStr'],
+            'package' => $res['package'],
+            'signType' =>'MD5'
+        );
+        ksort($sign_data);
+        $sign = md5(http_build_query($sign_data) . '&key=' . WechatConfigController::KEY);
+        $res['paySign'] = $sign;
+        return $res;
     }
 
     //随机32位字符串
