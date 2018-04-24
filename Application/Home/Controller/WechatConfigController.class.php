@@ -10,9 +10,9 @@ namespace Home\Controller;
 
 class WechatConfigController extends PublicController
 {
-    const APP_SECRET = 'd08550a6a736bcc3a7d0af6395436d9e';
-    const APP_ID     = 'wx35f6bf2d734cf758';
-    const MCH_ID     = '1502399271';
-    const KEY        = 'qjjt3dtxqjjt3dtxqjjt3dtxqjjt3dtx';
+    const APP_SECRET = '';
+    const APP_ID     = '';
+    const MCH_ID     = '';
+    const KEY        = '';
     const TOKEN      = '';
 }
