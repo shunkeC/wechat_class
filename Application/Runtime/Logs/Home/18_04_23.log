@@ -1,0 +1,116 @@
+[ 2018-04-23T14:07:28+08:00 ] 127.0.0.1 /index.php/home/wechatmini/get_openid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000101s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+ERR: 非法操作:get_openid
+
+[ 2018-04-23T14:07:43+08:00 ] 127.0.0.1 /index.php/home/wechatmini/getOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000078s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000185s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000257s ]
+
+[ 2018-04-23T14:08:11+08:00 ] 127.0.0.1 /index.php/home/wechatmini/getOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000294s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000192s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000359s ]
+
+[ 2018-04-23T14:14:44+08:00 ] 127.0.0.1 /index.php/home/wechatmini/getOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000275s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000188s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000320s ]
+
+[ 2018-04-23T14:15:53+08:00 ] 127.0.0.1 /index.php/home/wechatmini/getUnionId
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+
+[ 2018-04-23T14:15:53+08:00 ] 127.0.0.1 /index.php/home/wechatmini/getOpenid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000298s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000210s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2018-04-23T14:17:01+08:00 ] 127.0.0.1 /index.php/home/wechatmini/getUnionId
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+NOTIC: [8] Undefined index: session_key /Users/shawn/MyProjects/study_test/Application/Home/Controller/WechatminiController.class.php 第 94 行.
+
+[ 2018-04-23T14:17:23+08:00 ] 127.0.0.1 /index.php/home/wechatmini/getUnionId
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+
+[ 2018-04-23T14:17:48+08:00 ] 127.0.0.1 /index.php/home/wechatmini/getUnionId
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000245s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+
+[ 2018-04-23T14:17:58+08:00 ] 127.0.0.1 /index.php/home/wechatmini/getUnionId
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000183s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000228s ]
+
+[ 2018-04-23T14:18:48+08:00 ] 127.0.0.1 /index.php/home/wechatmini/getUnionId
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+NOTIC: [2] Declaration of Home\Controller\PublicController::ajaxReturn($status, $data, $msg = '', $type = '') should be compatible with Think\Controller::ajaxReturn($data, $type = '', $json_option = 0) /Users/shawn/MyProjects/study_test/Application/Home/Controller/PublicController.class.php 第 0 行.
+
