@@ -63,12 +63,12 @@ class WechatMini extends Common
         $sign_data = array(
             'appId' => WechatConfig::APP_ID,
             'timeStamp' => $res['timeStamp'],
-            'nonceStr' => $return_data['nonceStr'],
+            'nonceStr' => $return_data['nonce_str'],
             'package' => $res['package'],
             'signType' =>'MD5'
         );
         ksort($sign_data);
-        $sign = md5(http_build_query($sign_data) . '&key=' . WechatConfig::KEY);
+        $sign = md5(urldecode(http_build_query($sign_data) . '&key=' . WechatConfig::KEY));
         $res['paySign'] = $sign;
         return $res;
     }

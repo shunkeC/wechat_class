@@ -45,7 +45,7 @@ class Wechat extends Common
      */
     public function getAccessToken()
     {
-        $return_data = $this->httpGet("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" . WechatConfig::APP_ID . "&secret=" . WechatConfigController::APP_SECRET);
+        $return_data = $this->httpGet("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" . WechatConfig::APP_ID . "&secret=" . WechatConfig::APP_SECRET);
         $data = json_decode($return_data, true);
         if (isset($data['errcode'])) {
             $this->ajaxReturn(10001, '', $data['errmsg']);
@@ -63,7 +63,7 @@ class Wechat extends Common
      * @param string $page_path
      * @return mixed
      */
-    public function sendTemplate($openid, $template_id, $data, $jump_url = null, $is_miniprogram = false, $mini_appid = '', $page_path = '')
+    public function sendTemplate($openid, $template_id = '3R0LbQ2oxi0LMEI4z8WEm1kIc6zgfmz89qPmRpQPncg', $data=[], $jump_url = null, $is_miniprogram = false, $mini_appid = '', $page_path = '')
     {
         $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" . $this->getAccessToken();
         $post_data = array(
@@ -78,6 +78,7 @@ class Wechat extends Common
         }
         $post_data['data'] = $data;
         $return_data = $this->httpPost($url, $post_data, true);
+        $return_data = json_decode($return_data, true);
         if ($return_data['errcode'] != 0) {
             $this->ajaxReturn(10001, '', $return_data['errmsg']);
         } else return $return_data['msgid'];

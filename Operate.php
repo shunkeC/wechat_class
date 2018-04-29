@@ -6,20 +6,16 @@
  * Time: 18:30
  */
 
-namespace Home\Controller;
+
+use Home\Controller\Wechat;
 
 require_once './Common.php';
 require_once './Wechat.php';
 require_once './WechatMini.php';
+require_once './WechatConfig.php';
 
-class Operate extends Common
-{
-    public function payWechat()
-    {
-        $wechat_mini = new WechatMini();
-        $data = $wechat_mini->payWechat();
-        $this->ajaxReturn(10000, $data);
-    }
+(new Wechat())->sendTemplate('o2Tgb1LwnXWO2GyIl8_5aRx_chNo');
 
 
-}
+
+
