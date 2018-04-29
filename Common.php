@@ -50,9 +50,8 @@ class Common
         return $info;
     }
 
-    protected function ajaxReturn($status, $data, $msg = '', $type = '')
+    protected function ajaxReturn($status, $data, $msg = '', $type = 'JSON')
     {
-        if (empty($type)) $type = C('DEFAULT_AJAX_RETURN');
         switch (strtoupper($type)) {
             case 'JSON' :
                 // 返回JSON数据格式到客户端 包含状态信息
