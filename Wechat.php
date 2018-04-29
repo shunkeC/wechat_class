@@ -18,7 +18,6 @@ class Wechat extends Common
 {
     public function entrance()
     {
-        
 
 
     }
@@ -28,7 +27,7 @@ class Wechat extends Common
         $signature = $_GET['signature'];
         $timestamp = $_GET['timestamp'];
         $nonce = $_GET['nonce'];
-        $token = WechatConfigController::TOKEN;
+        $token = WechatConfig::TOKEN;
         $tmp_arr = [$token, $timestamp, $nonce];
         sort($tmp_arr, SORT_STRING);
         $tmp_str = implode($tmp_arr);
@@ -46,7 +45,7 @@ class Wechat extends Common
      */
     public function getAccessToken()
     {
-        $return_data = $this->httpGet("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" . WechatConfigController::APP_ID . "&secret=" . WechatConfigController::APP_SECRET);
+        $return_data = $this->httpGet("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=" . WechatConfig::APP_ID . "&secret=" . WechatConfigController::APP_SECRET);
         $data = json_decode($return_data, true);
         if (isset($data['errcode'])) {
             $this->ajaxReturn(10001, '', $data['errmsg']);

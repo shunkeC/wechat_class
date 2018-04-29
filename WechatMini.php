@@ -26,8 +26,8 @@ class WechatMini extends Common
     public function jsWechat($fee, $openid, $out_trade_no = null, $body = '商品')
     {
         $post = array(
-            'appid' => WechatConfigController::APP_ID,
-            'mch_id' => WechatConfigController::MCH_ID,
+            'appid' => WechatConfig::APP_ID,
+            'mch_id' => WechatConfig::MCH_ID,
             'nonce_str' => $this->nonceStr(),
             'body' => $body,
             'out_trade_no' => $out_trade_no ? $out_trade_no : $this->orderStr($openid),
@@ -38,7 +38,7 @@ class WechatMini extends Common
             'openid' => $openid
         );
         ksort($post);
-        $sign = strtoupper(md5(urldecode(http_build_query($post) . '&key=' . WechatConfigController::KEY)));
+        $sign = strtoupper(md5(urldecode(http_build_query($post) . '&key=' . WechatConfig::KEY)));
         $post['sign'] = $sign;
         $data = $this->arrayToXml($post);
         $return_data = $this->httpPost('https://api.mch.weixin.qq.com/pay/unifiedorder', $data, false);
@@ -61,14 +61,14 @@ class WechatMini extends Common
         $res['package'] = 'prepay_id=' . $return_data['prepay_id'];
         $res['signType'] = 'MD5';
         $sign_data = array(
-            'appId' => WechatConfigController::APP_ID,
+            'appId' => WechatConfig::APP_ID,
             'timeStamp' => $res['timeStamp'],
             'nonceStr' => $return_data['nonceStr'],
             'package' => $res['package'],
             'signType' =>'MD5'
         );
         ksort($sign_data);
-        $sign = md5(http_build_query($sign_data) . '&key=' . WechatConfigController::KEY);
+        $sign = md5(http_build_query($sign_data) . '&key=' . WechatConfig::KEY);
         $res['paySign'] = $sign;
         return $res;
     }
@@ -104,8 +104,8 @@ class WechatMini extends Common
     {
         if (isset($_POST['code'])) {
             $code = $_POST['code'];
-            $app_id = WechatConfigController::APP_ID;
-            $app_secret = WechatConfigController::APP_SECRET;
+            $app_id = WechatConfig::APP_ID;
+            $app_secret = WechatConfig::APP_SECRET;
             $response = $this->httpGet("https://api.weixin.qq.com/sns/jscode2session?appid={$app_id}&secret={$app_secret}&js_code={$code}&grant_type=authorization_code");
             $response = json_decode($response, true);
             if ($response['openid'] && $response['session_key']) {
@@ -144,7 +144,7 @@ class WechatMini extends Common
         $result = openssl_decrypt($aesCipher, "AES-128-CBC", $aesKey, 1, $aesIV);
         $dataObj = json_decode($result);
         if ($dataObj == NULL) $this->ajaxReturn(10001, '', 'base64加密失败');
-        if ($dataObj->watermark->appid != WechatConfigController::APP_ID) $this->ajaxReturn(10001, '', 'base64加密失败');
+        if ($dataObj->watermark->appid != WechatConfig::APP_ID) $this->ajaxReturn(10001, '', 'base64加密失败');
         $data = $result;
         return $data;
     }
