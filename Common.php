@@ -8,7 +8,6 @@
 
 namespace Home\Controller;
 
-use Think\Controller;
 
 class Common
 {

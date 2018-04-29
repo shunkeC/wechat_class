@@ -8,12 +8,15 @@
 
 namespace Home\Controller;
 
+require_once './Common.php';
+require_once './Wechat.php';
+require_once './WechatMini.php';
 
 class Operate extends Common
 {
     public function payWechat()
     {
-        $wechat_mini = new WechatMiniController();
+        $wechat_mini = new WechatMini();
         $data = $wechat_mini->payWechat();
         $this->ajaxReturn(10000, $data);
     }

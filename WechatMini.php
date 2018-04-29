@@ -15,12 +15,6 @@ namespace Home\Controller;
  */
 class WechatMini extends Common
 {
-    public $OK = 0;
-    public $IllegalAesKey = -41001;
-    public $IllegalIv = -41002;
-    public $IllegalBuffer = -41003;
-    public $DecodeBase64Error = -41004;
-
     /**
      * 微信统一下单
      * @param int $fee
