@@ -17,10 +17,10 @@ class WechatMini extends Common
 {
     /**
      * 微信统一下单
-     * @param int $fee
-     * @param string $openid
-     * @param null $out_trade_no
-     * @param string $body
+     * @param int $fee               价格 单位: 元
+     * @param string $openid         用户唯一标识
+     * @param null $out_trade_no     商品订单编号
+     * @param string $body           商品描述
      * @return mixed
      */
     public function jsWechat($fee, $openid, $out_trade_no = null, $body = '商品')
@@ -47,10 +47,10 @@ class WechatMini extends Common
 
     /**
      * 微信支付接口
-     * @param int $fee
-     * @param string $openid
-     * @param null $out_trade_no
-     * @param string $body
+     * @param int $fee              价格 单位: 分
+     * @param string $openid        用户openid
+     * @param null $out_trade_no    订单编号
+     * @param string $body          商品描述
      * @return mixed
      */
     public function payWechat($fee = 1, $openid = 'oAfYU0V7qtFYt_oRvbt2vB13Ln1E', $out_trade_no = null, $body = '商品')
@@ -73,7 +73,10 @@ class WechatMini extends Common
         return $res;
     }
 
-    //随机32位字符串
+    /**
+     * 随机32位字符串
+     * @return string
+     */
     private function nonceStr()
     {
         $result = '';
@@ -84,7 +87,11 @@ class WechatMini extends Common
         return $result;
     }
 
-    // 伪装的订单id
+    /**
+     * 伪装的订单id
+     * @param string $openid  用户openid
+     * @return string
+     */
     private function orderStr($openid)
     {
         $result = md5($openid . time() . rand(10, 99));
@@ -117,6 +124,7 @@ class WechatMini extends Common
 
     /**
      * 获取用户unionId
+     * @return int|string
      */
     public function getUnionId()
     {
@@ -129,10 +137,10 @@ class WechatMini extends Common
 
     /**
      * 检验数据的真实性，并且获取解密后的明文.
-     * @param $encryptedData string 加密的用户数据
-     * @param $iv string 与用户数据一同返回的初始向量
-     * @param $session_key
-     * @return int | string ，失败返回对应的错误码
+     * @param string $encryptedData  加密的用户数据
+     * @param string $iv             与用户数据一同返回的初始向量
+     * @param string $session_key
+     * @return int | string          失败返回对应的错误码
      */
     public function decryptData($encryptedData, $iv, $session_key)
     {

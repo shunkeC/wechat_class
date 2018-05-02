@@ -54,17 +54,18 @@ class Wechat extends Common
 
     /**
      * 发送模板消息
-     * @param $openid string 用户标识
-     * @param $template_id string 模板id
-     * @param $data array 数据
+     * @param $openid string        用户标识
+     * @param $template_id string   模板id
+     * @param $data array           需要发送的数据
      * @param null $jump_url string 跳转路径
-     * @param bool $is_miniprogram
-     * @param string $mini_appid
-     * @param string $page_path
+     * @param bool $is_miniprogram 是否是小程序
+     * @param string $mini_appid   小程序appId
+     * @param string $page_path    小程序跳转路径
      * @return mixed
      */
-    public function sendTemplate($openid, $template_id = '3R0LbQ2oxi0LMEI4z8WEm1kIc6zgfmz89qPmRpQPncg', $data=[], $jump_url = null, $is_miniprogram = false, $mini_appid = '', $page_path = '')
+    public function sendTemplate($openid, $template_id, $data=[], $jump_url = null, $is_miniprogram = false, $mini_appid = '', $page_path = '')
     {
+        if (! isset($template_id)) $this->ajaxReturn(10001, '', 'template id必填');
         $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" . $this->getAccessToken();
         $post_data = array(
             'touser' => $openid,

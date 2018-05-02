@@ -11,6 +11,13 @@ namespace Home\Controller;
 
 class Common
 {
+    /**
+     * post请求
+     * @param string $url      请求地址
+     * @param array $post_data 请求数据
+     * @param bool $is_json    是否是json流
+     * @return mixed
+     */
     protected function httpPost($url, $post_data, $is_json = true)
     {
         $curl = curl_init();
@@ -34,6 +41,11 @@ class Common
         return $data;
     }
 
+    /**
+     * get请求
+     * @param string $url  请求地址
+     * @return bool|string
+     */
     protected function httpGet($url)
     {
         $curl = curl_init();
@@ -49,6 +61,13 @@ class Common
         return $info;
     }
 
+    /**
+     * 根据类型返回数据
+     * @param int | string $status 状态码
+     * @param array | string $data 数据
+     * @param string $msg          信息
+     * @param string $type         类型
+     */
     protected function ajaxReturn($status, $data, $msg = '', $type = 'JSON')
     {
         switch (strtoupper($type)) {
@@ -73,6 +92,11 @@ class Common
         }
     }
 
+    /**
+     * 数组转xml格式
+     * @param $arr
+     * @return string
+     */
     protected function arrayToXml($arr)
     {
         $xml = "<xml>";
