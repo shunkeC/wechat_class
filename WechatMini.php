@@ -32,7 +32,7 @@ class WechatMini extends Common
             'body' => $body,
             'out_trade_no' => $out_trade_no ? $out_trade_no : $this->orderStr($openid),
             'total_fee' => $fee,
-            'spbill_create_ip' => $_SERVER['REMOTE_ADDR'],
+            'spbill_create_ip' => $_SERVER['REMOTE_ADDR'] == '::1' ? '127.0.0.1' : $_SERVER['REMOTE_ADDR'],
             'notify_url' => 'http://www.weixin.qq.com/wxpay/pay.php',
             'trade_type' => 'JSAPI',
             'openid' => $openid
