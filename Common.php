@@ -39,6 +39,7 @@ class Common
         $data = curl_exec($curl);
         curl_close($curl);
         return $data;
+        
     }
 
     /**
