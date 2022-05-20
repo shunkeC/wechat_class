@@ -86,6 +86,8 @@ class Common
                 exit($data);
         }
     }
+    
+    
 
     /**
      * 数组转xml格式
